@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WordWise — Minimal Dictionary</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        font-family: 'Inter', sans-serif;
+      }
+
+      input::placeholder {
+        color: #9ca3af; /* Tailwind slate-400 */
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-800 min-h-screen flex flex-col items-center px-4 py-10">
+    <div class="w-full max-w-md">
+      <h1 class="text-2xl font-semibold text-center mb-6 tracking-tight">WordWise</h1>
+      
+      <input
+        type="text"
+        id="wordInput"
+        placeholder="Type a word..."
+        class="w-full border border-gray-300 rounded-md px-4 py-2 mb-3 focus:outline-none focus:ring-1 focus:ring-gray-500"
+      />
+
+      <button
+        id="searchBtn"
+        class="w-full bg-gray-900 text-white py-2 rounded-md hover:bg-black transition"
+      >
+        Define
+      </button>
+
+      <div id="result" class="mt-8 space-y-4 text-sm leading-relaxed"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
